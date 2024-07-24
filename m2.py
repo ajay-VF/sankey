@@ -126,46 +126,46 @@ node_colors = {
     "Coal": '#77bdc9',
     "Coal Statistical Diff.": '#77bdc9',
     "Coal Export": '#77bdc9',
-    "Coal Cons.": '#77bdc9',
-    "Electricity Plant": '#77bdc9',
-    "Industry": '#77bdc9',
-    "Iron & steel": '#77bdc9',
-    "Chemical & petrochemical": '#77bdc9',
+    "Coal Cons.": '#7db2d4',
+    "Electricity Plant": '#a4adb0',
+    "Industry": '#c9adc9',
+    "Iron & steel": '#dea985',
+    "Chemical & petrochemical": '#9fa789',
     "Pulp & Paper": '#77bdc9',
     "Construction": '#77bdc9',
     "Textile & leather": '#77bdc9',
-    "Non-specified (industry)": '#77bdc9',
+    "Non-specified (industry)": '#f2c2e4',
     "Domestic Crude": '#77bdc9',
     "Imported Crude": '#77bdc9',
     "Crude Statistical Diff.": '#77bdc9',
     "Crude Oil": '#77bdc9',
-    "Oil Refinery": '#77bdc9',
+    "Oil Refinery": '#b88e74',
     "Oil Refinery Losses": '#77bdc9',
-    "PP Imports": '#77bdc9',
-    "Petroleum Products": '#77bdc9',
-    "Exports": '#77bdc9',
-    "PP Statistical Diff.": '#77bdc9',
-    "Oil Cons.": '#77bdc9',
-    "Transport": '#77bdc9',
-    "Residential": '#77bdc9',
-    "Agriculture": '#77bdc9',
+    "PP Imports": '#b88e74',
+    "Petroleum Products": '#b88e74',
+    "Exports": '#ffc593',
+    "PP Statistical Diff.": '#ffc593',
+    "Oil Cons.": '#b88e74',
+    "Transport": '#706f8f',
+    "Residential": '#D52627',
+    "Agriculture": '#c5c5c5',
     "Commercial & Public Services": '#77bdc9',
-    "Others": '#77bdc9',
+    "Others": '#7f8487',
     "Non-ferrous metals": '#77bdc9',
     "Machinery": '#77bdc9',
     "Mining and quarrying": '#77bdc9',
-    "Road": '#77bdc9',
-    "Rail": '#77bdc9',
-    "Domestic aviation": '#77bdc9',
-    "Domestic navigation": '#77bdc9',
+    "Road": '#827879',
+    "Rail": '#827879',
+    "Domestic aviation": '#827879',
+    "Domestic navigation": '#827879',
     "Domestic NG": '#77bdc9',
     "Imported NG": '#77bdc9',
     "NG Statistical Diff.": '#77bdc9',
-    "Natural Gas": '#77bdc9',
+    "Natural Gas": '#999367',
     "NG Cons.": '#77bdc9',
     "Own Use": '#77bdc9',
     "NG Losses": '#77bdc9',
-    "Non-Energy Use": '#77bdc9',
+    "Non-Energy Use": '#876580',
     "Pipeline Trans.": '#77bdc9',
     "Nuclear Prod.": '#77bdc9',
     "Nuclear": '#77bdc9',
@@ -174,13 +174,13 @@ node_colors = {
     "Captive": '#77bdc9',
     "Renewable Prod.": '#77bdc9',
     "Renewable": '#77bdc9',
-    "Thermal Losses in Power Plants": '#77bdc9',
+    "Thermal Losses in Power Plants": '#7F8487',
     "Electricity Imports": '#77bdc9',
-    "Electricity": '#77bdc9',
+    "Electricity": '#7f8487',
     "Auto Producer": '#77bdc9',
     "Elec. Statistical Diff.": '#77bdc9',
-    "Electricity Final Cons.": '#77bdc9',
-    "T&D Loss": '#77bdc9',
+    "Electricity Final Cons.": '#7f8487',
+    "T&D Loss": '#f2c2e4',
     "Electricity Export": '#77bdc9',
     "Auxiliary Cons.": '#77bdc9'
 }
@@ -192,7 +192,7 @@ for i, label in enumerate(labels):
         nodes['color'][i] = node_colors[label]
     else:
         nodes['color'][i] = 'rgba(31, 119, 180, 0.8)'  # Default color if node color is not defined
-
+ 
 # Create links
 links = {
     'source': [label_indices[item['from']] for item in data],
@@ -203,13 +203,13 @@ links = {
 
 # Define path colors
 path_colors = {
-    ("Domestic Coal", "Coal"): '#77bdc9',    # Red
-    ("Imported Coal", "Coal"): '#77bdc9',    # Green
-    ("Coal Stock Exchange", "Coal"): '#77bdc9',
-    ("Coal","Electricity Plant"): '#77bdc9',
-    ("Coal","Coal Cons."):'#77bdc9',
-    ("Coal","Coal Statistical Diff."):'#77bdc9',
-    ("Coal","Coal Export"): '#77bdc9',
+    ("Domestic Coal", "Coal"): '#97e2e9',    # Red
+    ("Imported Coal", "Coal"): '#97e2e9',    # Green
+    ("Coal Stock Exchange", "Coal"): '#97e2e9',
+    ("Coal","Electricity Plant"): '#97e2e9',
+    ("Coal","Coal Cons."):'#97e2e9',
+    ("Coal","Coal Statistical Diff."):'#97e2e9',
+    ("Coal","Coal Export"): '#97e2e9',
 
     ("Coal Cons.", "Industry") :'#7db2d4',
     ("Electricity Final Cons.", "Industry") :'#7db2d4',
@@ -221,7 +221,7 @@ path_colors = {
     ("Industry", "Pulp & Paper") :'#948d93',
     ("Industry", "Construction") :'#494d5c',
     ("Industry", "Textile & leather") :'#424242',
-    ("Industry", "Non-specified (industry)") :'#c9adc9',
+    ("Industry", "Non-specified (industry)") :'#f2c2e4',
     ("Industry", "Non-ferrous metals") :'#c9adc9',
     ("Industry", "Machinery") :'#c9adc9',
     ("Industry", "Mining and quarrying") :'#c9adc9',
@@ -242,26 +242,26 @@ path_colors = {
     #("NG Cons.", "Non-Energy Use") :'#876580',
     #("NG Cons.", "Non-Energy Use") :'#876580',
 
-    ("Imported Crude", "Crude Oil") :'#50748c',
-    ("Domestic Crude", "Crude Oil") :'#50748c',
-    ("Crude Statistical Diff.", "Crude Oil") :'#50748c',
+    ("Imported Crude", "Crude Oil") :'#9ac2dd',
+    ("Domestic Crude", "Crude Oil") :'#9ac2dd',
+    ("Crude Statistical Diff.", "Crude Oil") :'#9ac2dd',
 
-    ("Crude Oil", "Oil Refinery") :'#7496ad',
-    ("Crude Oil", "Oil Refinery Losses") :'#7496ad',
+    ("Crude Oil", "Oil Refinery") :'#9ac2dd',
+    ("Crude Oil", "Oil Refinery Losses") :'#9ac2dd',
 
-    ("Oil Refinery", "Petroleum Products") :'#b88e74',
-    ("PP Imports", "Petroleum Products") :'#b88e74',
+    ("Oil Refinery", "Petroleum Products") :'#ffc593',
+    ("PP Imports", "Petroleum Products") :'#ffc593',
 
-    ("Petroleum Products", "Oil Cons.") :'#b88e74',
-    ("Petroleum Products", "Exports") :'#b88e74',
-    ("Petroleum Products", "PP Statistical Diff.") :'#b88e74',
-    ("Petroleum Products", "Electricity Plant") :'#b88e74',
+    ("Petroleum Products", "Oil Cons.") :'#ffc593',
+    ("Petroleum Products", "Exports") :'#ffc593',
+    ("Petroleum Products", "PP Statistical Diff.") :'#ffc593',
+    ("Petroleum Products", "Electricity Plant") :'#ffc593',
 
-    ("Oil Cons.", "Others") :'#7d7e80',
+    ("Oil Cons.", "Others") :'#c5c5c5',
     ("Oil Cons.", "Industry") :'#5b87a8',
     ("Oil Cons.", "Transport") :'#706f8f',
     ("Oil Cons.", "Agriculture") :'#8f8a68',
-    ("Oil Cons.", "Residential") :'#754b54',
+    ("Oil Cons.", "Residential") :'#ED9E9E',
     ("Oil Cons.", "Commercial & Public Services") :'#7d7e80',
 
     ("Transport", "Road") :'#827879',
@@ -270,8 +270,8 @@ path_colors = {
     ("Transport", "Pipeline Trans.") :'#827879',
     ("Transport", "Domestic navigation") :'#827879',
 
-    ("Nuclear Prod.", "Nuclear") :'#356270',
-    ("Nuclear", "Electricity Plant") :'#356270',
+    ("Nuclear Prod.", "Nuclear") :'#84cfd5',
+    ("Nuclear", "Electricity Plant") :'#84cfd5',
 
 
     ("Hydro Prod.", "Hydro") :'#364e66',
@@ -280,24 +280,24 @@ path_colors = {
     ("Renewable Prod.", "Renewable") :'#3d5243',
     ("Renewable", "Electricity Plant") :'#364e66',
 
-    ("Electricity Plant", "Thermal Losses in Power Plants") :'#a4adb0',
-    ("Electricity Plant", "Electricity") :'#a4adb0',
+    ("Electricity Plant", "Thermal Losses in Power Plants") :'#c5c5c5',
+    ("Electricity Plant", "Electricity") :'#c5c5c5',
 
-    ("Auto Producer", "Electricity") :'#a4adb0',
-    ("Electricity Imports", "Electricity") :'#a4adb0',
+    ("Auto Producer", "Electricity") :'#c5c5c5',
+    ("Electricity Imports", "Electricity") :'#c5c5c5',
 
-    ("Electricity", "Electricity Final Cons.") :'#7f8487',
+    ("Electricity", "Electricity Final Cons.") :'#c5c5c5',
     ("Electricity", "T&D Loss") :'#b09ab5',
     ("Electricity", "Auxiliary Cons.") :'#777c7d',
     ("Electricity", "Elec. Statistical Diff.") :'#767a4c',
     ("Electricity", "Electricity Export") :'#828687',
 
-    ("Electricity Final Cons.", "Industry") :'#7f8487',
-    ("Electricity Final Cons.", "Agriculture") :'#7f8487',
-    ("Electricity Final Cons.", "Commercial & Public Services") :'#7f8487',
-    ("Electricity Final Cons.", "Residential") :'#7f8487',
-    ("Electricity Final Cons.", "Others") :'#7f8487',
-    ("Electricity Final Cons.", "Transport") :'#7f8487',
+    ("Electricity Final Cons.", "Industry") :'#c5c5c5',
+    ("Electricity Final Cons.", "Agriculture") :'#c5c5c5',
+    ("Electricity Final Cons.", "Commercial & Public Services") :'#c5c5c5',
+    ("Electricity Final Cons.", "Residential") :'#c5c5c5',
+    ("Electricity Final Cons.", "Others") :'#c5c5c5',
+    ("Electricity Final Cons.", "Transport") :'#c5c5c5',
 
     #("Nuclear Prod.", "Nuclear"): 'brown',
     #("Nuclear", "Electricity Plant"): 'brown',
@@ -350,7 +350,6 @@ path_colors = {
 
     # Add more path-specific colors as needed
 }
-
 
 
 # Assign colors to links based on the defined path colors
